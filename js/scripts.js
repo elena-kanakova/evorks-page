@@ -1,3 +1,5 @@
+"use strict";
+
 $('.select-form select').each(function() {
     var $this = $(this)
         , numberOfOptions = $(this).children('option').length;
