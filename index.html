@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="libs/swiper.min.css">
 </head>
 <body>
 <div id="wrapper">
@@ -118,7 +119,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="categories-nav_item"><span>Услуги</span>
+                            <li class="categories-nav_item active"><span>Услуги</span>
                                 <ul class="categories-nav_item-inner_wrap">
                                     <li class="categories-nav_item-inner">
                                         <a href="">ПОДСОБНИК-РАЗНОРАБОЧИЙ</a>
@@ -170,9 +171,9 @@
             <div class="index__content flex">
                 <main id="index__slider-form_wrap">
                     <section id="index__section-slider">
-                        <div class="index__slider-wrap">
-                            <div id="index__slider">
-                                <div class="slide flex">
+                        <div class="index__slider-wrap swiper-container">
+                            <div id="index__slider" class="swiper-wrapper">
+                                <div class="slide flex swiper-slide">
                                     <div class="slide_content">
                                         <div class="slide_title">
                                             <h3>Сервис
@@ -189,13 +190,44 @@
                                         </picture>
                                     </div>-->
                                 </div>
+                                <div class="slide flex swiper-slide">
+                                    <div class="slide_content">
+                                        <div class="slide_title">
+                                            <h3>Сервис
+                                                по предоставлению <br>услуг рабочей силы</h3>
+                                        </div>
+                                        <div class="slide_desc">
+                                            <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
+                                                и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide flex swiper-slide">
+                                    <div class="slide_content">
+                                        <div class="slide_title">
+                                            <h3>Сервис
+                                                по предоставлению <br>услуг рабочей силы</h3>
+                                        </div>
+                                        <div class="slide_desc">
+                                            <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
+                                                и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slide flex swiper-slide">
+                                    <div class="slide_content">
+                                        <div class="slide_title">
+                                            <h3>Сервис
+                                                по предоставлению <br>услуг рабочей силы</h3>
+                                        </div>
+                                        <div class="slide_desc">
+                                            <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
+                                                и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="pagination flex">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
+                            <div class="pagination flex"></div>
                         </div>
                     </section>
                     <section id="index__section-form">
@@ -228,7 +260,7 @@
                                                 <label for="phone">Номер телефона</label>
                                             </div>
                                             <div class="input_wrap">
-                                                <input name="phone" id="phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX">
+                                                <input name="phone" id="phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
                                             </div>
                                         </div>
                                     </div>
@@ -330,6 +362,7 @@
 
 <script src="libs/jquery-3.2.1.min.js"></script>
 <script src="libs/jquery.maskedinput.min.js"></script>
+<script src="libs/swiper.min.js"></script>
 <script src="js/scripts.js"></script>
 
 </body>

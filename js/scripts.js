@@ -1,5 +1,3 @@
-"use strict";
-
 $('.select-form select').each(function() {
     var $this = $(this)
         , numberOfOptions = $(this).children('option').length;
@@ -55,4 +53,21 @@ $('.js-sidebar-menu').on('click', function (e) {
     $(this).toggleClass('active');
     //$('html').toggleClass('fixed');
     $('.categories-filter').toggleClass('active');
+});
+
+var index__slider = new Swiper('.index__slider-wrap', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    setWrapperSize: false,
+    pagination: {
+        el: '.pagination',
+        clickable: true,
+        bulletClass: 'dot',
+        bulletActiveClass: 'active'
+    }
+});
+
+$(function(){
+    $(".js-phone").mask("+7 999 999 99 99");
 });
