@@ -111,14 +111,14 @@ em {
   display: none !important; }
 
 html.fixed {
-  position: fixed;
-  width: 100%;
-  max-width: 1920px;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%); }
+    position: fixed;
+    width: 100%;
+    max-width: 1920px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 
 /*Контейнер для всего сайта */
 #wrapper {
