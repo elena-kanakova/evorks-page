@@ -55,6 +55,10 @@ $('.js-sidebar-menu').on('click', function (e) {
     $('.categories-filter').toggleClass('active');
 });
 
+$('.categories-nav_item').on('click', function (e) {
+    $(this).toggleClass('active');
+});
+
 var index__slider = new Swiper('.index__slider-wrap', {
     slidesPerView: 1,
     spaceBetween: 0,
