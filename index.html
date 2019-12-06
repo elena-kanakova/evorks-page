@@ -31,16 +31,16 @@
                     </form>
                 </div>
                 <a href="tel:89639135451" class="header-contacts">8 (963) 913-54-51</a>
-                <button class="order-call">Заказать звонок</button>
+                <button class="order-call js-modal-link_btn" data-href="order-call">Заказать звонок</button>
             </div>
-            <div class="mobile__nav-btn_wrap js-header-menu">
+            <div class="mobile__nav-btn_wrap js-header-menu none">
                 <div class="btn-menu flex column">
                     <span class="one"></span>
                     <span class="two"></span>
                     <span class="three"></span>
                 </div>
             </div>
-            <nav class="header-nav_wrap">
+            <nav class="header-nav_wrap none">
                 <ul class="header-nav flex">
                     <li><a href="#" class="active">Все услуги</a></li>
                     <li><a href="#">Оплата</a></li>
@@ -50,7 +50,7 @@
                 </ul>
             </nav>
             <div class="order-service_link-wrap">
-                <button class="order-service_link">Заказать услугу</button>
+                <button class="order-service_link js-modal-link_btn" data-href="order-call">Заказать услугу</button>
             </div>
         </div>
     </header>
@@ -163,7 +163,7 @@
                     </nav>
                 </div>
                 <div class="all-categories-link_wrap">
-                    <button class="categories-link">Все услуги</button>
+                    <button class="categories-link js-modal-link_btn" data-href="order-call">Все услуги</button>
                 </div>
             </aside>
         </div>
@@ -289,7 +289,7 @@
                     </section>
                 </main>
                 <aside id="services-block">
-                    <article class="services-block__item flex">
+                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call">
                         <div class="services-block__item-text">
                             <div class="services-block__item-title">
                                 <h3>Подсобник
@@ -304,7 +304,7 @@
                             <picture><img src="img/helmet.png" alt="Фото"></picture>
                         </div>-->
                     </article>
-                    <article class="services-block__item flex">
+                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call">
                         <div class="services-block__item-text">
                             <div class="services-block__item-title">
                                 <h3>Установить раковину</h3>
@@ -318,7 +318,7 @@
                             <picture><img src="img/sink.png" alt="Фото"></picture>
                         </div>-->
                     </article>
-                    <article class="services-block__item flex">
+                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call">
                         <div class="services-block__item-text">
                             <div class="services-block__item-title">
                                 <h3>Грузчики
@@ -356,6 +356,69 @@
                     </form>
                 </div>
             </footer>
+        </div>
+    </div>
+</div>
+<div class="overlay"></div>
+<div id="order-call" class="modal">
+    <div class="modal-wrap">
+        <div class="btn-modal_close js-close-btn flex">
+            <p class="close">закрыть</p>
+        </div>
+        <div class="index__form-wrap">
+            <div class="index__form_title-desc_wrap">
+                <div class="title">
+                    <h3>Быстрый
+                        заказ</h3>
+                </div>
+                <div class="desc">
+                    <p>Укажите ваши контактные данные.
+                        Опишите нужные виды работ.
+                        Менеджер перезвонит вам,
+                        с готовым решением.</p>
+                </div>
+            </div>
+            <div class="index__order-form_form-wrap">
+                <form action="" id="index__order-form">
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="name">Имя</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="name" id="name" type="text" placeholder="Введите имя">
+                            </div>
+                        </div>
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="phone">Номер телефона</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="phone" id="phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="text"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <textarea name="text" id="text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                            </div>
+                        </div>
+                        <div class="btn-submit_wrap flex column">
+                            <div class="btn_wrap">
+                                <button type="submit">Заказать услугу</button>
+                            </div>
+                            <div class="check-agree_wrap flex">
+                                <input name="agree" id="input_agree" type="checkbox" checked>
+                                <label id="label_agree" for="input_agree">Согласие на обработку персональных данных</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
