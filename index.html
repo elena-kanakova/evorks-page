@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="libs/swiper.min.css">
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../libs/swiper.min.css">
+
 </head>
 <body>
 <div id="wrapper">
     <header id="header" class="flex">
         <div class="header-logo_wrap">
             <a href="/" class="header-logo">
-                <img src="img/header-logo.svg" alt="Logo">
+                <img src="../../img/header-logo.svg" alt="Logo">
                 <span>Сервис по предоставлению услуг рабочей силы</span>
             </a>
         </div>
@@ -31,7 +32,7 @@
                     </form>
                 </div>
                 <a href="tel:89639135451" class="header-contacts">8 (963) 913-54-51</a>
-                <button class="order-call js-modal-link_btn" data-href="order-call">Заказать звонок</button>
+                <button class="order-call js-modal-link_btn" data-href="order-call" data-title="Заказать звонок">Заказать звонок</button>
             </div>
             <div class="mobile__nav-btn_wrap js-header-menu none">
                 <div class="btn-menu flex column">
@@ -50,7 +51,7 @@
                 </ul>
             </nav>
             <div class="order-service_link-wrap">
-                <button class="order-service_link js-modal-link_btn" data-href="order-call">Заказать услугу</button>
+                <button class="order-service_link js-modal-link_btn" data-href="order-call" data-title="Заказать услугу">Заказать услугу</button>
             </div>
         </div>
     </header>
@@ -68,18 +69,19 @@
                     <div class="categories_filter-form_wrap">
                         <form action="" id="categories_filter-form" class="flex">
                             <div class="categories_filter-form_label_wrap">
-                                <label for="categories_filter-form_input">
-                                    <img src="img/search-icon_black.svg" alt="Иконка">
+                                <label id="categories_filter-form_label" for="categories_filter-form_input" class="flex">
+                                    <img src="../../img/search-icon_black.svg" alt="Иконка">
+                                    <span>Выберите категорию</span>
                                 </label>
                             </div>
                             <div class="categories_filter-form_input_wrap">
-                                <input id="categories_filter-form_input" name="categories_filter-form_input" type="text" placeholder="Выберите категорию">
+                                <input id="categories_filter-form_input" name="categories_filter-form_input" type="text">
                             </div>
                         </form>
                     </div>
                     <nav class="categories-nav">
                         <ul class="categories-nav-items_wrap">
-                            <li class="categories-nav_item"><span>экворкеры</span>
+                            <li class="categories-nav_item active"><span>экворкеры</span>
                                 <ul class="categories-nav_item-inner_wrap">
                                     <li class="categories-nav_item-inner">
                                         <a href="">ПОДСОБНИК-РАЗНОРАБОЧИЙ</a>
@@ -119,7 +121,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="categories-nav_item"><span>Услуги</span>
+                            <li class="categories-nav_item active"><span>Услуги</span>
                                 <ul class="categories-nav_item-inner_wrap">
                                     <li class="categories-nav_item-inner">
                                         <a href="">ПОДСОБНИК-РАЗНОРАБОЧИЙ</a>
@@ -163,7 +165,7 @@
                     </nav>
                 </div>
                 <div class="all-categories-link_wrap">
-                    <button class="categories-link js-modal-link_btn" data-href="order-call">Все услуги</button>
+                    <button class="categories-link js-modal-link_btn" data-href="order-call" data-title="Оставьте заявку на получение подробностей">Все услуги</button>
                 </div>
             </aside>
         </div>
@@ -184,22 +186,10 @@
                                                 и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
                                         </div>
                                     </div>
-                                    <!--<div class="slide_img">
+                                    <div class="slide_img">
                                         <picture>
-                                            <img src="img/slider-photo_1.png" alt="Фото">
+                                            <img src="../../img/slider-photo_1.png" alt="Фото" class="js-index-slider_img">
                                         </picture>
-                                    </div>-->
-                                </div>
-                                <div class="slide flex swiper-slide">
-                                    <div class="slide_content">
-                                        <div class="slide_title">
-                                            <h3>Сервис
-                                                по предоставлению <br>услуг рабочей силы</h3>
-                                        </div>
-                                        <div class="slide_desc">
-                                            <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
-                                                и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="slide flex swiper-slide">
@@ -213,6 +203,11 @@
                                                 и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
                                         </div>
                                     </div>
+                                    <div class="slide_img">
+                                        <picture>
+                                            <img src="../../img/slider-photo_1.png" alt="Фото" class="js-index-slider_img">
+                                        </picture>
+                                    </div>
                                 </div>
                                 <div class="slide flex swiper-slide">
                                     <div class="slide_content">
@@ -224,6 +219,28 @@
                                             <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
                                                 и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
                                         </div>
+                                    </div>
+                                    <div class="slide_img">
+                                        <picture>
+                                            <img src="../../img/slider-photo_1.png" alt="Фото" class="js-index-slider_img">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="slide flex swiper-slide">
+                                    <div class="slide_content">
+                                        <div class="slide_title">
+                                            <h3>Сервис
+                                                по предоставлению <br>услуг рабочей силы</h3>
+                                        </div>
+                                        <div class="slide_desc">
+                                            <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
+                                                и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
+                                        </div>
+                                    </div>
+                                    <div class="slide_img">
+                                        <picture>
+                                            <img src="../../img/slider-photo_1.png" alt="Фото" class="js-index-slider_img">
+                                        </picture>
                                     </div>
                                 </div>
                             </div>
@@ -252,7 +269,7 @@
                                                 <label for="name">Имя</label>
                                             </div>
                                             <div class="input_wrap">
-                                                <input name="name" id="name" type="text" placeholder="Владимир">
+                                                <input name="name" id="name" type="text" placeholder="Ваше имя">
                                             </div>
                                         </div>
                                         <div class="label-input_wrap">
@@ -289,7 +306,7 @@
                     </section>
                 </main>
                 <aside id="services-block">
-                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call">
+                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call" data-title="Заказ Подсобника-разнорабочего">
                         <div class="services-block__item-text">
                             <div class="services-block__item-title">
                                 <h3>Подсобник
@@ -300,11 +317,11 @@
                                 <p>Рабочий часовой день 8 часов 1300 руб.</p>
                             </div>
                         </div>
-                        <!--<div class="services-block__item-img">
-                            <picture><img src="img/helmet.png" alt="Фото"></picture>
-                        </div>-->
+                        <div class="services-block__item-img">
+                            <picture><img src="../../img/helmet-photo.png" alt="Фото" class="js-services-block__img"></picture>
+                        </div>
                     </article>
-                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call">
+                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call" data-title="Заказ Мастера на час">
                         <div class="services-block__item-text">
                             <div class="services-block__item-title">
                                 <h3>Установить раковину</h3>
@@ -314,11 +331,11 @@
                                 <p>Выполнит любую вспомогательную задачу</p>
                             </div>
                         </div>
-                        <!--<div class="services-block__item-img">
-                            <picture><img src="img/sink.png" alt="Фото"></picture>
-                        </div>-->
+                        <div class="services-block__item-img">
+                            <picture><img src="../../img/sink-photo.png" alt="Фото" class="js-services-block__img"></picture>
+                        </div>
                     </article>
-                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call">
+                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call" data-title="Заказ грузчиков">
                         <div class="services-block__item-text">
                             <div class="services-block__item-title">
                                 <h3>Грузчики
@@ -329,9 +346,9 @@
                                 <p>Рабочий часовой день 8 часов 1300 руб</p>
                             </div>
                         </div>
-                        <!--<div class="services-block__item-img">
-                            <picture><img src="img/boxes.png" alt="Фото"></picture>
-                        </div>-->
+                        <div class="services-block__item-img">
+                            <picture><img src="../../img/boxes-photo.png" alt="Фото" class="js-services-block__img"></picture>
+                        </div>
                     </article>
                 </aside>
             </div>
@@ -368,8 +385,7 @@
         <div class="index__form-wrap">
             <div class="index__form_title-desc_wrap">
                 <div class="title">
-                    <h3>Быстрый
-                        заказ</h3>
+                    <h3 id="modal-form_title"></h3>
                 </div>
                 <div class="desc">
                     <p>Укажите ваши контактные данные.
