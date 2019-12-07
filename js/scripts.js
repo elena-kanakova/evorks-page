@@ -50,6 +50,7 @@ $('.js-header-menu').on('click', function (e) {
 
 $('.js-sidebar-menu').on('click', function (e) {
     $(this).toggleClass('active');
+    //$('html').toggleClass('fixed');
     $('.categories-filter').toggleClass('active');
 });
 
@@ -80,7 +81,7 @@ $(document).ready(function() {
 
         let id = '#' + $(this).attr('data-href');
         let title = $(this).attr('data-title');
-        let modalTitle = $('#modal-form_title');
+        let modalTitle = $('.modal-form_title');
 
         //$('html').addClass('fixed');
         $('.overlay').fadeIn(200);

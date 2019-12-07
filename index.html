@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="libs/swiper.min.css">
+
 </head>
 <body>
 <div id="wrapper">
@@ -12,7 +13,7 @@
         <div class="header-logo_wrap">
             <a href="/" class="header-logo">
                 <img src="img/header-logo.svg" alt="Logo">
-                <span>Сервис по предоставлению услуг рабочей силы</span>
+                <span>Сервис по предоставлению <br>услуг рабочей силы</span>
             </a>
         </div>
         <div class="header-content_wrap flex">
@@ -123,40 +124,31 @@
                             <li class="categories-nav_item active"><span>Услуги</span>
                                 <ul class="categories-nav_item-inner_wrap">
                                     <li class="categories-nav_item-inner">
-                                        <a href="">ПОДСОБНИК-РАЗНОРАБОЧИЙ</a>
+                                        <a href="">МЕЛКИЙ РЕМОНТ</a>
                                     </li>
                                     <li class="categories-nav_item-inner">
-                                        <a href="">ГРУЗЧИК И ТАКЕЛАЖНИКИ</a>
+                                        <a href="">ОТДЕЛКА И РЕМОНТ</a>
                                     </li>
                                     <li class="categories-nav_item-inner">
-                                        <a href="">МАСТЕР НА ЧАС</a>
+                                        <a href="">СТРОИТЕЛЬНЫЕ РАБОТЫ</a>
                                     </li>
                                     <li class="categories-nav_item-inner">
-                                        <a href="">МАСТЕР ПО РЕМОНТУ</a>
+                                        <a href="">ДЕМОНТАЖ</a>
                                     </li>
                                     <li class="categories-nav_item-inner">
-                                        <a href="">ЭЛЕКТРИК</a>
+                                        <a href="">САНТЕХНИКА</a>
                                     </li>
                                     <li class="categories-nav_item-inner">
-                                        <a href="">САНТЕХНИК</a>
+                                        <a href="">ЭЛЕКТРИКА</a>
                                     </li>
                                     <li class="categories-nav_item-inner">
-                                        <a href="">ЗЕМЛЕКОП</a>
+                                        <a href="">СБОРКА МЕБЕЛИ</a>
                                     </li>
                                     <li class="categories-nav_item-inner">
-                                        <a href="">ДВОРНИК</a>
+                                        <a href="">УБОРКА МУСОРА</a>
                                     </li>
                                     <li class="categories-nav_item-inner">
-                                        <a href="">КЛИНИНГ-МАСТЕР</a>
-                                    </li>
-                                    <li class="categories-nav_item-inner">
-                                        <a href="">УПАКОВЩИК-КОМПЛЕКТОВЩИК</a>
-                                    </li>
-                                    <li class="categories-nav_item-inner">
-                                        <a href="">РАБОЧИЙ НА ПРОИЗВОДСТВО</a>
-                                    </li>
-                                    <li class="categories-nav_item-inner">
-                                        <a href="">другие эворкеры</a>
+                                        <a href="">КЛИНИНГ</a>
                                     </li>
                                 </ul>
                             </li>
@@ -367,7 +359,7 @@
                             <input type="text" id="footer_form__input" placeholder="Например, сантехник или заделать трещину в полу">
                         </div>
                         <div class="footer_form__submit-btn">
-                            <button type="submit"></button>
+                            <button type="submit" class="js-modal-link_btn" data-href="modal-form_search" data-title="Оставьте заявку"></button>
                         </div>
                     </form>
                 </div>
@@ -384,7 +376,7 @@
         <div class="index__form-wrap">
             <div class="index__form_title-desc_wrap">
                 <div class="title">
-                    <h3 id="modal-form_title"></h3>
+                    <h3 class="modal-form_title"></h3>
                 </div>
                 <div class="desc">
                     <p>Укажите ваши контактные данные.
@@ -394,32 +386,32 @@
                 </div>
             </div>
             <div class="index__order-form_form-wrap">
-                <form action="" id="modal-form">
+                <form action="" id="modal__order-form">
                     <div class="index__order-form-elements_wrap">
                         <div class="label-input_wrap">
                             <div class="label_wrap">
-                                <label for="modal-form_name">Имя</label>
+                                <label for="modal__order-form_name">Имя</label>
                             </div>
                             <div class="input_wrap">
-                                <input name="name" id="modal-form_name" type="text" placeholder="Введите имя">
+                                <input name="name" id="modal__order-form_name" type="text" placeholder="Введите имя">
                             </div>
                         </div>
                         <div class="label-input_wrap">
                             <div class="label_wrap">
-                                <label for="modal-form_phone">Номер телефона</label>
+                                <label for="modal__order-form_phone">Номер телефона</label>
                             </div>
                             <div class="input_wrap">
-                                <input name="phone" id="modal-form_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                                <input name="phone" id="modal__order-form_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
                             </div>
                         </div>
                     </div>
                     <div class="index__order-form-elements_wrap">
                         <div class="label-input_wrap">
                             <div class="label_wrap">
-                                <label for="modal-form_text"></label>
+                                <label for="modal__order-form_text"></label>
                             </div>
                             <div class="input_wrap">
-                                <textarea name="text" id="modal-form_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                                <textarea name="text" id="modal__order-form_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
                             </div>
                         </div>
                         <div class="btn-submit_wrap flex column">
@@ -427,8 +419,69 @@
                                 <button type="submit">Заказать услугу</button>
                             </div>
                             <div class="check-agree_wrap flex">
-                                <input name="agree" id="modal-form_input_agree" type="checkbox" checked>
-                                <label id="modal-form_label_agree" for="input_agree">Согласие на обработку персональных данных</label>
+                                <input name="agree" id="modal__order-form_input_agree" type="checkbox" checked>
+                                <label id="modal__order-form_label_agree" for="modal__order-form_input_agree">Согласие на обработку персональных данных</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-form_search" class="modal">
+    <div class="modal-wrap">
+        <div class="btn-modal_close js-close-btn flex">
+            <p class="close">закрыть</p>
+        </div>
+        <div class="index__form-wrap">
+            <div class="index__form_title-desc_wrap">
+                <div class="title">
+                    <h3 class="modal-form_title"></h3>
+                </div>
+                <div class="desc">
+                    <p>Поиск на сервисе временно не доступен.
+                        Укажите ваши контактные данные.
+                        Опишите то, что вы ищете.
+                        Мы перезвоним вам и поможем с поиском.</p>
+                </div>
+            </div>
+            <div class="index__order-form_form-wrap">
+                <form action="" id="modal-form_search_form">
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal-form_search_name">Имя</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="name" id="modal-form_search_name" type="text" placeholder="Введите имя">
+                            </div>
+                        </div>
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal-form_search_phone">Номер телефона</label>
+                            </div>
+                            <div class="input_wrap">
+                                <input name="phone" id="modal-form_search_phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index__order-form-elements_wrap">
+                        <div class="label-input_wrap">
+                            <div class="label_wrap">
+                                <label for="modal-form_search_text"></label>
+                            </div>
+                            <div class="input_wrap">
+                                <textarea name="text" id="modal-form_search_text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
+                            </div>
+                        </div>
+                        <div class="btn-submit_wrap flex column">
+                            <div class="btn_wrap">
+                                <button type="submit">Заказать услугу</button>
+                            </div>
+                            <div class="check-agree_wrap flex">
+                                <input name="agree" id="modal-form_search_input_agree" type="checkbox" checked>
+                                <label id="modal-form_search_label_agree" for="modal-form_search_input_agree">Согласие на обработку персональных данных</label>
                             </div>
                         </div>
                     </div>
