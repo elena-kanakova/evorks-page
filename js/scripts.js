@@ -82,7 +82,7 @@ $(document).ready(function() {
         let title = $(this).attr('data-title');
         let modalTitle = $('#modal-form_title');
 
-        $('html').addClass('fixed');
+        //$('html').addClass('fixed');
         $('.overlay').fadeIn(200);
         $(id).fadeIn(500);
         $(modalTitle).text(title);
@@ -92,14 +92,14 @@ $(document).ready(function() {
         e.preventDefault();
         $('.overlay').fadeOut(200);
         $('.modal').fadeOut(500);
-        $('html').removeClass('fixed');
+        //$('html').removeClass('fixed');
     });
 
     $('body').on('click', '.overlay', function(event) {
         event.preventDefault();
         $('.overlay').fadeOut(200);
         $('.modal').fadeOut(500);
-        $('html').removeClass('fixed');
+        //$('html').removeClass('fixed');
     });
 });
 
