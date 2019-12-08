@@ -81,12 +81,15 @@ $(document).ready(function() {
 
         let id = '#' + $(this).attr('data-href');
         let title = $(this).attr('data-title');
+        let btnTitle = $(this).attr('data-btnTitle');
         let modalTitle = $('.modal-form_title');
+        let modalBtnTitle = $('.js-modal-form_btn');
 
         //$('html').addClass('fixed');
         $('.overlay').fadeIn(200);
         $(id).fadeIn(500);
         $(modalTitle).text(title);
+        $(modalBtnTitle).text(btnTitle);
     });
 
     $('.js-close-btn').click(function (e) {
