@@ -143,3 +143,20 @@ $(document).ready(function() {
         article.css('background-size','cover');
     });
 });
+
+$(window).on('load resize', function() {
+    if ($(window).width() <= 1280) {
+        $('.footer-inner__items-wrap:not(.slick-initialized)').slick({
+            centerMode: true,
+            autoplay: true,
+            dots: false,
+            infinite: true,
+            speed: 200,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true
+        });
+    } else {
+        $(".footer-inner__items-wrap.slick-initialized").slick("unslick");
+    }
+});
