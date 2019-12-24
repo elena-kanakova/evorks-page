@@ -2194,7 +2194,8 @@ html.fixed {
     margin-bottom: 15px;
     font: 24px Montserrat, sans-serif;
     font-weight: bold;
-    color: white; }
+    color: white;
+    text-transform: uppercase; }
   .evorkers_title p {
     font: 14px Montserrat, sans-serif;
     font-weight: 500;
@@ -2221,25 +2222,36 @@ html.fixed {
           flex: 1 1 33%;
   background: white;
   border-right: 1px solid #C6C2F3;
-  border-bottom: 1px solid #C6C2F3; }
-  .evorkers_item:nth-child(2) {
-    position: relative;
-    z-index: 2;
-    -webkit-box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5);
-            box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5); }
-  .evorkers_item:after {
-    display: none;
-    position: absolute;
-    content: '';
-    z-index: 1;
-    left: auto;
-    top: auto;
-    bottom: 0;
-    right: 0;
+  border-bottom: 1px solid #C6C2F3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+  /*&:after {
+    opacity: 0;
+    visibility: hidden;
+    @include pseudo(1,auto,auto,0,0);
     width: 70px;
     height: 70px;
     background: url("../img/x-icon.svg") center center no-repeat #7266FF;
-    background-size: 20px 20px; }
+    background-size: 20px 20px;
+    transition: all .3s linear;
+  }*/ }
+  .evorkers_item:hover {
+    position: relative;
+    z-index: 2;
+    -webkit-box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5);
+            box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5);
+    /*&:after {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .evorkers_item-img {
+      right: 108px;
+    }*/ }
   @media only screen and (max-width: 1366px) {
     .evorkers_item {
       padding: 30px 20px; } }
@@ -2262,11 +2274,14 @@ html.fixed {
   position: relative;
   z-index: 2;
   -webkit-box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5);
-          box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5); }
-  .evorkers_item_active:after {
-    display: block; }
-  .evorkers_item_active .evorkers_item-img {
-    right: 108px; }
+          box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5);
+  /*&:after {
+    display: block;
+  }
+
+  .evorkers_item-img {
+    right: 108px;
+  }*/ }
 
 .evorkers_item-title {
   position: relative;
@@ -2289,13 +2304,12 @@ html.fixed {
 .evorkers_item-img {
   position: absolute;
   z-index: 1;
-  right: 20px;
+  width: 107px;
+  right: 5px;
   bottom: 0; }
   .evorkers_item-img img {
-    display: block; }
-  @media only screen and (max-width: 640px) {
-    .evorkers_item-img {
-      right: 10px; } }
+    display: block;
+    margin: 0 auto; }
 
 .evorkers_item__more {
   padding: 30px;
@@ -2305,7 +2319,18 @@ html.fixed {
       -ms-flex: 1 1 66%;
           flex: 1 1 66%;
   background: rgba(114, 102, 255, 0.1);
-  border-right: 1px solid #C6C2F3; }
+  border-right: 1px solid #C6C2F3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear; }
+  .evorkers_item__more:hover {
+    position: relative;
+    z-index: 2;
+    -webkit-box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5);
+            box-shadow: 5px 5px 15px 0 rgba(114, 102, 255, 0.5); }
   .evorkers_item__more .more-icon span {
     display: block;
     margin-right: 10px;
@@ -2777,7 +2802,8 @@ html.fixed {
     margin-bottom: 15px;
     font: 24px Montserrat, sans-serif;
     font-weight: bold;
-    color: white; }
+    color: white;
+    text-transform: uppercase; }
   .services_title p {
     font: 14px Montserrat, sans-serif;
     font-weight: 500;
@@ -2804,25 +2830,33 @@ html.fixed {
           flex: 1 1 33%;
   background: white;
   border-right: 1px solid #C6C2F3;
-  border-top: 1px solid #C6C2F3; }
-  .services_item:after {
+  border-top: 1px solid #C6C2F3;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+  /*&:after {
     display: none;
-    position: absolute;
-    content: '';
-    z-index: 1;
-    left: auto;
-    top: auto;
-    bottom: 0;
-    right: 0;
+    @include pseudo(1,auto,auto,0,0);
     width: 70px;
     height: 70px;
-    background: url("../img/x-icon.svg") center center no-repeat #FF6666;
-    background-size: 20px 20px; }
-  .services_item:nth-child(2) {
+    background: url("../img/x-icon.svg") center center no-repeat #FF6666;;
+    background-size: 20px 20px;
+  }*/ }
+  .services_item:hover {
     position: relative;
     z-index: 2;
     -webkit-box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5);
-            box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5); }
+            box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5);
+    /*&:after {
+      display: block;
+    }
+
+    .services_item-img {
+      right: 108px;
+    }*/ }
   @media only screen and (max-width: 1366px) {
     .services_item {
       padding: 30px 20px; } }
@@ -2846,11 +2880,14 @@ html.fixed {
   position: relative;
   z-index: 2;
   -webkit-box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5);
-          box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5); }
-  .services_item_active:after {
-    display: block; }
-  .services_item_active .services_item-img {
-    right: 108px; }
+          box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5);
+  /*&:after {
+    display: block;
+  }
+
+  .services_item-img {
+    right: 108px;
+  }*/ }
 
 .services_item-title {
   margin-bottom: 10px; }
@@ -2867,10 +2904,13 @@ html.fixed {
 
 .services_item-img {
   position: absolute;
-  right: 20px;
+  z-index: 1;
+  width: 113px;
+  right: 5px;
   bottom: 0; }
   .services_item-img img {
-    display: block; }
+    display: block;
+    margin: 0 auto; }
 
 .services_item__more {
   padding: 30px;
@@ -2881,7 +2921,18 @@ html.fixed {
           flex: 1 1 33%;
   border-top: 1px solid #C6C2F3;
   border-right: 1px solid #C6C2F3;
-  background: rgba(255, 102, 102, 0.1); }
+  background: rgba(255, 102, 102, 0.1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear; }
+  .services_item__more:hover {
+    position: relative;
+    z-index: 2;
+    -webkit-box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5);
+            box-shadow: 5px 5px 15px 0 rgba(255, 102, 102, 0.5); }
   .services_item__more .more-icon span {
     display: block;
     margin-right: 10px;
