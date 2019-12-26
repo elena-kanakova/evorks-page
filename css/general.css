@@ -3047,48 +3047,72 @@ html.fixed {
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
-  background-size: cover; }
-  #services__aside .services-aside__item:nth-child(1) {
-    background: #E9E7FC; }
-  #services__aside .services-aside__item:nth-child(2) {
-    background: #FFE0E0; }
-    #services__aside .services-aside__item:nth-child(2) .services-aside__item-img {
-      bottom: 40px;
-      right: 20px; }
-      @media only screen and (max-width: 1280px) {
-        #services__aside .services-aside__item:nth-child(2) .services-aside__item-img {
-          bottom: 30px; } }
-      @media only screen and (max-width: 1024px) {
-        #services__aside .services-aside__item:nth-child(2) .services-aside__item-img {
+  background-size: cover;
+  /*&:nth-child(1) {
+      background: #E9E7FC;
+    }
+
+    &:nth-child(2) {
+      background: #FFE0E0;
+
+      .services-aside__item-img {
+        bottom: 40px;
+        right: 20px;
+
+        @include mq-custom(1280px) {
+          bottom: 30px;
+        }
+
+        @include mq-custom(1024px) {
           right: 10px;
-          bottom: 20px; } }
-      @media only screen and (max-width: 850px) {
-        #services__aside .services-aside__item:nth-child(2) .services-aside__item-img {
+          bottom: 20px;
+        }
+
+        @include mq-custom(850px) {
           right: 10px;
-          bottom: 10px; } }
-      @media only screen and (max-width: 414px) {
-        #services__aside .services-aside__item:nth-child(2) .services-aside__item-img {
-          bottom: 5px; } }
-  #services__aside .services-aside__item:nth-child(3) {
-    background: #FDF2C6; }
-  #services__aside .services-aside__item:nth-child(4) {
-    background: #F3F8FB; }
-    #services__aside .services-aside__item:nth-child(4) .services-aside__item-img img {
-      max-width: 80%; }
-  #services__aside .services-aside__item:nth-child(5) {
-    background: #FFE6D7; }
-    #services__aside .services-aside__item:nth-child(5) .services-aside__item-img {
-      bottom: 40px;
-      right: 10px; }
-      @media only screen and (max-width: 850px) {
-        #services__aside .services-aside__item:nth-child(5) .services-aside__item-img {
-          bottom: 30px; } }
-      @media only screen and (max-width: 640px) {
-        #services__aside .services-aside__item:nth-child(5) .services-aside__item-img {
-          bottom: 20px; } }
-      @media only screen and (max-width: 414px) {
-        #services__aside .services-aside__item:nth-child(5) .services-aside__item-img {
-          bottom: 5px; } }
+          bottom: 10px;
+        }
+
+        @include mq-custom(414px) {
+          bottom: 5px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      background: #FDF2C6;
+    }
+
+    &:nth-child(4) {
+      background: #F3F8FB;
+
+      .services-aside__item-img {
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      background: #FFE6D7;
+
+      .services-aside__item-img {
+        bottom: 40px;
+        right: 10px;
+
+        @include mq-custom(850px) {
+          bottom: 30px;
+        }
+
+        @include mq-custom(640px) {
+          bottom: 20px;
+        }
+
+        @include mq-custom(414px) {
+          bottom: 5px;
+        }
+      }
+    }*/ }
   @media only screen and (max-width: 1360px) {
     #services__aside .services-aside__item {
       width: 33%;
@@ -3186,19 +3210,18 @@ html.fixed {
 #services__aside .services-aside__item-img {
   position: absolute;
   z-index: 2;
-  width: 50%;
-  bottom: 0;
-  right: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  /*bottom: 0;
+    right: 0;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;*/ }
   #services__aside .services-aside__item-img img {
-    display: block;
+    display: none;
     max-width: 100%; }
     @media only screen and (max-width: 414px) {
       #services__aside .services-aside__item-img img {
