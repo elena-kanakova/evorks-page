@@ -138,9 +138,8 @@ $(document).ready(function() {
     img.each(function () {
         let article = $(this).parent().parent().parent();
         let imgBg = $(this).attr('src');
-        let imgSrc = 'url("' + imgBg + '") center center no-repeat';
-        article.css('background',imgSrc);
-        article.css('background-size','cover');
+        let imgSrc = 'url("' + imgBg + '")';
+        article.css('background-image',imgSrc);
     });
 });
 
