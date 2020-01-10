@@ -138,8 +138,15 @@ $(document).ready(function() {
     img.each(function () {
         let article = $(this).parent().parent().parent();
         let imgBg = $(this).attr('src');
-        let imgSrc = 'url("' + imgBg + '")';
-        article.css('background-image',imgSrc);
+        let imgSrc = 'url("' + imgBg + '") center center no-repeat';
+        article.css('background',imgSrc);
+        article.css('background-size','cover');
+    });
+});
+
+$(document).ready(function() {
+    $('.js-open').on('click', function () {
+        $(this).toggleClass('faq-item_active');
     });
 });
 

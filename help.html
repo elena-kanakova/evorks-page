@@ -7,6 +7,8 @@
     <meta name="description" content="Экономит ваше время и старается предоставить лучших работников для дома, дачи и бизнеса.">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="libs/swiper.min.css">
+    <link rel="stylesheet" href="libs/slick.css">
+    <link rel="stylesheet" href="libs/slick-theme.css">
 </head>
 <body>
 <div id="wrapper">
@@ -161,211 +163,146 @@
                 </div>
             </aside>
         </div>
-        <div class="content-footer_wrap flex">
-            <div class="index__content flex">
-                <main id="index__slider-form_wrap">
-                    <section id="index__section-slider">
-                        <div class="index__slider-wrap swiper-container">
-                            <div id="index__slider" class="swiper-wrapper">
-                                <div class="slide flex swiper-slide">
-                                    <div class="slide_content">
-                                        <div class="slide_title">
-                                            <h3>Сервис по предоставлению  <br>разнорабочих</h3>
-                                        </div>
-                                        <div class="slide_desc">
-                                            <p>Эворкс - услуги разнорабочего. Экономит ваше время и предоставляет лучших работников для бизнеса, дома и дачи.</p>
-                                        </div>
-                                    </div>
-                                    <div class="slide_img">
-                                        <picture>
-                                            <img src="img/slider-photo_1.png" alt="Фото" class="js-index-slider_img">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="slide flex swiper-slide">
-                                    <div class="slide_content">
-                                        <div class="slide_title">
-                                            <h3>Сервис
-                                                по предоставлению <br>услуг рабочей силы</h3>
-                                        </div>
-                                        <div class="slide_desc">
-                                            <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
-                                                и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
-                                        </div>
-                                    </div>
-                                    <div class="slide_img">
-                                        <picture>
-                                            <img src="img/slider-photo_1.png" alt="Фото" class="js-index-slider_img">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="slide flex swiper-slide">
-                                    <div class="slide_content">
-                                        <div class="slide_title">
-                                            <h3>Сервис
-                                                по предоставлению <br>услуг рабочей силы</h3>
-                                        </div>
-                                        <div class="slide_desc">
-                                            <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
-                                                и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
-                                        </div>
-                                    </div>
-                                    <div class="slide_img">
-                                        <picture>
-                                            <img src="img/slider-photo_1.png" alt="Фото" class="js-index-slider_img">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="slide flex swiper-slide">
-                                    <div class="slide_content">
-                                        <div class="slide_title">
-                                            <h3>Сервис
-                                                по предоставлению <br>услуг рабочей силы</h3>
-                                        </div>
-                                        <div class="slide_desc">
-                                            <p>Эворкс — услуги разнорабочего. Экономит ваше время <br>
-                                                и старается предоставить лучших работников для дома, дачи и бизнеса.</p>
-                                        </div>
-                                    </div>
-                                    <div class="slide_img">
-                                        <picture>
-                                            <img src="img/slider-photo_1.png" alt="Фото" class="js-index-slider_img">
-                                        </picture>
-                                    </div>
-                                </div>
+        <div class="content-footer_wrap">
+            <div id="breadcrumbs">
+                <ul class="breadcrumbs_wrap flex">
+                    <li class="breadcrumbs-item">
+                        <a href="index.html" class="breadcrumbs-link">Главная</a>
+                    </li>
+                    <li class="breadcrumbs-item">
+                        <a href="" class="breadcrumbs-link breadcrumbs-link_active">Все услуги</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="services_content-wrap flex">
+                <main id="services__content" class="services_content_left-part">
+                    <section id="help__form" class="help__form-wrap flex">
+                        <div class="help__form_title-desc_wrap">
+                            <div class="title">
+                                <h2>Помощь</h2>
                             </div>
-                            <div class="pagination flex"></div>
+                            <div class="desc">
+                                <p>Оставьте свои данные для получения информации от нашего менеджера</p>
+                            </div>
                         </div>
-                    </section>
-                    <section id="index__section-form">
-                        <div class="index__form-wrap flex">
-                            <div class="index__form_title-desc_wrap">
-                                <div class="title">
-                                    <h3>ЗАКАЗАТЬ РАЗНОРАБОЧИХ</h3>
+                        <form action="" id="help-form">
+                            <div class="help__form-elements_wrap flex">
+                                <div class="label-input_wrap">
+                                    <div class="label_wrap">
+                                        <label for="help-form__name">Имя</label>
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input name="name" id="help-form__name" type="text" placeholder="Имя">
+                                    </div>
                                 </div>
-                                <div class="desc">
-                                    <p>Укажите ваши контактные данные.
-                                        Опишите нужные виды работ.
-                                        Менеджер перезвонит вам,
-                                        с готовым решением.</p>
+                                <div class="label-input_wrap">
+                                    <div class="label_wrap">
+                                        <label for="help-form__lastname">Имя</label>
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input name="name" id="help-form__lastname" type="text" placeholder="Фамилия">
+                                    </div>
+                                </div>
+                                <div class="label-input_wrap">
+                                    <div class="label_wrap">
+                                        <label for="phone">Номер телефона</label>
+                                    </div>
+                                    <div class="input_wrap">
+                                        <input name="phone" id="phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="index__order-form_form-wrap">
-                                <form action="" id="index__order-form">
-                                    <div class="index__order-form-elements_wrap flex">
-                                        <div class="label-input_wrap">
-                                            <div class="label_wrap">
-                                                <label for="name">Имя</label>
-                                            </div>
-                                            <div class="input_wrap">
-                                                <input name="name" id="name" type="text" placeholder="Ваше имя">
-                                            </div>
-                                        </div>
-                                        <div class="label-input_wrap">
-                                            <div class="label_wrap">
-                                                <label for="phone">Номер телефона</label>
-                                            </div>
-                                            <div class="input_wrap">
-                                                <input name="phone" id="phone" type="tel" placeholder="+7 (XXX) XXX-XX-XX" class="js-phone">
-                                            </div>
-                                        </div>
+                            <div class="help__form-elements_wrap flex">
+                                <div class="label-input_wrap textarea">
+                                    <div class="label_wrap">
+                                        <label for="text"></label>
                                     </div>
-                                    <div class="index__order-form-elements_wrap flex">
-                                        <div class="label-input_wrap">
-                                            <div class="label_wrap">
-                                                <label for="text"></label>
-                                            </div>
-                                            <div class="input_wrap">
-                                                <textarea name="text" id="text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="btn-submit_wrap">
-                                            <div class="btn_wrap">
-                                                <button type="submit">Заказать</button>
-                                            </div>
-                                            <div class="check-agree_wrap flex">
-                                                <input name="agree" id="input_agree" type="checkbox" checked class="input_agree">
-                                                <label id="label_agree" for="input_agree" class="label_agree">Согласие на обработку персональных данных</label>
-                                            </div>
-                                        </div>
+                                    <div class="input_wrap">
+                                        <textarea name="text" id="text" cols="30" rows="4"  placeholder="Здесь вы можете оставить коментарий к заказу"></textarea>
                                     </div>
-                                </form>
+                                </div>
+                                <div class="btn-submit_wrap flex column">
+                                    <div class="btn_wrap">
+                                        <button type="submit">Отправить</button>
+                                    </div>
+                                    <div class="check-agree_wrap flex">
+                                        <input name="agree" id="input_agree" type="checkbox" checked class="input_agree">
+                                        <label id="label_agree" for="input_agree" class="label_agree">Согласие на обработку персональных данных</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                    <section id="help__content">
+                        <div class="help__title">
+                            <h2>Часто задаваемые вопросы</h2>
+                        </div>
+                        <div class="help__faq-wrap">
+                            <div class="help__faq-item js-open">
+                                <span class="question">Сколько часов длится рабочая смена?</span>
+                                <span class="answer">Работник отработает нужное для вас количество часов.
+                                        Но стоит иметь ввиду что, стандартный рабочий день 8 часов и последующие
+                                        рабочие часы работник имеет право перенести на следующий день.
+                                        Также стоит заметить что таких проблем обычно не возникает и наши
+                                        Эворкеры отработают для с удовольствие более 8 часов в день, если это очень нужно.</span>
+                            </div>
+                            <div class="help__faq-item js-open">
+                                <span class="question">Что делать если работник не приехал?</span>
+                                <span class="answer">Работник отработает нужное для вас количество часов.
+                                        Но стоит иметь ввиду что, стандартный рабочий день 8 часов и последующие
+                                        рабочие часы работник имеет право перенести на следующий день.
+                                        Также стоит заметить что таких проблем обычно не возникает и наши
+                                        Эворкеры отработают для с удовольствие более 8 часов в день, если это очень нужно.</span>
+                            </div>
+                            <div class="help__faq-item js-open">
+                                <span class="question">Что делать если работник не приехал?</span>
+                                <span class="answer">Работник отработает нужное для вас количество часов.
+                                        Но стоит иметь ввиду что, стандартный рабочий день 8 часов и последующие
+                                        рабочие часы работник имеет право перенести на следующий день.
+                                        Также стоит заметить что таких проблем обычно не возникает и наши
+                                        Эворкеры отработают для с удовольствие более 8 часов в день, если это очень нужно.</span>
+                            </div>
+                            <div class="help__faq-item js-open">
+                                <span class="question">Можно оплатить наличными?</span>
+                                <span class="answer">Работник отработает нужное для вас количество часов.
+                                        Но стоит иметь ввиду что, стандартный рабочий день 8 часов и последующие
+                                        рабочие часы работник имеет право перенести на следующий день.
+                                        Также стоит заметить что таких проблем обычно не возникает и наши
+                                        Эворкеры отработают для с удовольствие более 8 часов в день, если это очень нужно.</span>
+                            </div>
+                            <div class="help__faq-item js-open">
+                                <span class="question">Какие работы может выполнять разнорабочий?</span>
+                                <span class="answer">Работник отработает нужное для вас количество часов.
+                                        Но стоит иметь ввиду что, стандартный рабочий день 8 часов и последующие
+                                        рабочие часы работник имеет право перенести на следующий день.
+                                        Также стоит заметить что таких проблем обычно не возникает и наши
+                                        Эворкеры отработают для с удовольствие более 8 часов в день, если это очень нужно.</span>
+                            </div>
+                            <div class="help__faq-item js-open">
+                                <span class="question">Как происходит оплата работ?</span>
+                                <span class="answer">Работник отработает нужное для вас количество часов.
+                                        Но стоит иметь ввиду что, стандартный рабочий день 8 часов и последующие
+                                        рабочие часы работник имеет право перенести на следующий день.
+                                        Также стоит заметить что таких проблем обычно не возникает и наши
+                                        Эворкеры отработают для с удовольствие более 8 часов в день, если это очень нужно.</span>
+                            </div>
+                            <div class="help__faq-item js-open">
+                                <span class="question">Если я оплачу работников заранее, можно ли вернуть деньги в случае чего?</span>
+                                <span class="answer">Работник отработает нужное для вас количество часов.
+                                        Но стоит иметь ввиду что, стандартный рабочий день 8 часов и последующие
+                                        рабочие часы работник имеет право перенести на следующий день.
+                                        Также стоит заметить что таких проблем обычно не возникает и наши
+                                        Эворкеры отработают для с удовольствие более 8 часов в день, если это очень нужно.</span>
                             </div>
                         </div>
                     </section>
                 </main>
-                <aside id="services-block">
-                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call" data-title="Заказ Подсобника-разнорабочего" data-btnTitle="Заказать">
-                        <div class="services-block__item-text">
-                            <div class="services-block__item-title">
-                                <h3>Подсобник
-                                    на стройку</h3>
-                            </div>
-                            <div class="services-block__item-desc">
-                                <p class="bold">175 руб/час</p>
-                                <p>Восьми часовой рабочий день 1400 руб.</p>
-                            </div>
-                        </div>
-                        <div class="services-block__item-img">
-                            <picture><img src="img/helmet-photo.png" alt="Фото" class="js-services-block__img"></picture>
-                        </div>
-                    </article>
-                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call" data-title="Заказ Подсобника-разнорабочего" data-btnTitle="Заказать">
-                        <div class="services-block__item-text">
-                            <div class="services-block__item-title">
-                                <h3>Качественные работники</h3>
-                            </div>
-                            <div class="services-block__item-desc">
-                                <p class="bold"></p>
-                                <p>Мы тщательно подбираем и обучаем каждого работника</p>
-                            </div>
-                        </div>
-                        <div class="services-block__item-img">
-                            <picture><img src="img/index__services_baner-2.png" alt="Фото" class="js-services-block__img"></picture>
-                        </div>
-                    </article>
-                    <article class="services-block__item flex js-modal-link_btn" data-href="order-call" data-title="Заказ Подсобника-разнорабочего" data-btnTitle="Заказать">
-                        <div class="services-block__item-text">
-                            <div class="services-block__item-title">
-                                <h3>Гибкое расписание</h3>
-                            </div>
-                            <div class="services-block__item-desc">
-                                <p class="bold"></p>
-                                <p>До 100 человек уже на следующий день, благодаря новой системе сервиса</p>
-                            </div>
-                        </div>
-                        <div class="services-block__item-img">
-                            <picture><img src="img/index__services_baner-3.png" alt="Фото" class="js-services-block__img"></picture>
-                        </div>
-                    </article>
-                </aside>
             </div>
-            <footer id="footer" class="flex">
-                <div class="footer_title-desc_wrap flex">
-                    <div class="footer_title">
-                        <h3>Поиск</h3>
-                    </div>
-                    <div class="footer_desc">
-                        <p>Напишите о проблеме
-                            или название мастера</p>
-                    </div>
-                </div>
-                <div class="footer_form-wrap">
-                    <form action="" id="footer_form" class="flex">
-                        <div class="footer_form__input">
-                            <input type="text" id="footer_form__input" placeholder="Например, сантехник или заделать трещину в полу">
-                        </div>
-                        <div class="footer_form__submit-btn">
-                            <button type="submit" class="js-modal-link_btn" data-href="modal-form_search" data-title="Оставьте заявку" data-btnTitle="Оставить заявку"></button>
-                        </div>
-                    </form>
-                </div>
-            </footer>
         </div>
     </div>
 </div>
 <div class="overlay"></div>
-<div id="order-call" class="modal">
+<div id="order-call__services" class="modal">
     <div class="modal-wrap">
         <div class="btn-modal_close js-close-btn flex">
             <p class="close">закрыть</p>
@@ -376,10 +313,7 @@
                     <h3 class="modal-form_title"></h3>
                 </div>
                 <div class="desc">
-                    <p>Укажите ваши контактные данные.
-                        Опишите нужные виды работ.
-                        Менеджер перезвонит вам,
-                        с готовым решением.</p>
+                    <p>Оставьте заявку на получение подробностей, менеджер перезвонит вам!</p>
                 </div>
             </div>
             <div class="index__order-form_form-wrap">
@@ -491,6 +425,7 @@
 <script src="libs/jquery-3.2.1.min.js"></script>
 <script src="libs/jquery.maskedinput.min.js"></script>
 <script src="libs/swiper.min.js"></script>
+<script src="libs/slick.min.js"></script>
 <script src="js/scripts.js"></script>
 
 </body>
