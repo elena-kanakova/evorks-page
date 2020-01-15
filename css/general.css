@@ -6117,7 +6117,8 @@ html.fixed {
   -webkit-flex: 1 1 38%;
       -ms-flex: 1 1 38%;
           flex: 1 1 38%;
-  border-left: 1px solid #DADADA; }
+  border-left: 1px solid #DADADA;
+  border-bottom: 1px solid #DADADA; }
   @media only screen and (max-width: 1023px) {
     #evorker__form-wrap {
       width: 100%;
