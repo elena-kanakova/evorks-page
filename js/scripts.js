@@ -43,6 +43,51 @@ $('.select-form select').each(function() {
     });
 });
 
+$('.master_form select').each(function() {
+    var $this = $(this)
+        , numberOfOptions = $(this).children('option').length;
+    $this.addClass('select_hidden');
+    $this.wrap('<div class="select"></div>');
+    $this.after('<p class="select_styled"></p>');
+
+    var $styledSelect = $this.next('p.select_styled');
+
+    $styledSelect.text($this.children('option').eq(0).text());
+
+    var $list = $('<ul />', {
+        'class': 'select_options'
+    }).insertAfter($styledSelect);
+
+    for (var i = 0; i < numberOfOptions; i++) {
+        $('<li />', {
+            text: $this.children('option').eq(i).text(),
+            rel: $this.children('option').eq(i).val()
+        }).appendTo($list);
+    }
+
+    var $listItems = $list.children('li');
+
+    $styledSelect.click(function(e) {
+        e.stopPropagation();
+        $('div.select_styled.active').not(this).each(function() {
+            $(this).removeClass('active').next('ul.select_options').hide();
+        });
+        $(this).toggleClass('active').next('ul.select_options').toggle();
+    });
+
+    $listItems.click(function(e) {
+        e.stopPropagation();
+        $styledSelect.text($(this).text()).removeClass('active').addClass('selected');
+        $this.val($(this).attr('rel'));
+        $list.hide();
+        $("input[type='submit'].filterApply").trigger('click');
+    });
+    $(document).click(function() {
+        $styledSelect.removeClass('active');
+        $list.hide();
+    });
+});
+
 $('.js-header-menu').on('click', function (e) {
     $(this).toggleClass('nav-btn_active');
     $('.header-nav_wrap').toggleClass('header-nav_active');
@@ -171,7 +216,9 @@ $(document).ready(function() {
     let $btnNextStep1 = $('.evorker__form__step-1_wrap .js-btn-step');
     let $btnNextStep2 = $('.evorker__form__step-2_wrap .js-btn-next');
     let $btnPrevStep2 = $('.evorker__form__step-2_wrap .js-btn-prev');
+    let $btnPrevStep3 = $('.evorker__form__step-3_wrap .js-btn-prev');
     let $btnNextStep3 = $('.evorker__form__step-3_wrap .js-btn-step');
+    let $btnPrevStep4 = $('.evorker__form__step-4_wrap .js-btn-prev');
 
     $btnNextStep1.click(function (e) {
         e.preventDefault();
@@ -197,11 +244,26 @@ $(document).ready(function() {
         $('.js-step-2__title').removeClass('step-active').addClass('done');
     });
 
+    $btnPrevStep3.click(function (e) {
+        e.preventDefault();
+        $('.evorker__form__step-3_wrap').addClass('none').removeClass('done');
+        $('.evorker__form__step-2_wrap').removeClass('none').addClass('active');
+        $('.js-step-2__title').addClass('step-active');
+        $('.js-step-3__title').removeClass('step-active').removeClass('done');
+    });
+
     $btnNextStep3.click(function (e) {
         e.preventDefault();
         $('.evorker__form__step-3_wrap').addClass('none');
         $('.evorker__form__step-4_wrap').removeClass('none').addClass('active');
         $('.js-step-3__title').removeClass('step-active').addClass('done');
+    });
+
+    $btnPrevStep4.click(function (e) {
+        e.preventDefault();
+        $('.evorker__form__step-4_wrap').addClass('none').removeClass('done');
+        $('.evorker__form__step-3_wrap').removeClass('none').addClass('active');
+        $('.js-step-3__title').addClass('step-active').removeClass('done');
     });
 });
 
@@ -227,3 +289,21 @@ $(document).ready(function() {
         }
     );
 });
+
+function check(){
+    let x = document.getElementById("evorker-form__file");
+    if ('files' in x) {
+        if (x.files.length !== 0) {
+            $('.input-file_wrap .plus').addClass('none');
+            $('.input-file_wrap .text').addClass('none');
+            $('.input-file_wrap .done').addClass('show');
+        } else {
+            $('.input-file_wrap .plus').removeClass('none');
+            $('.input-file_wrap .text').removeClass('none');
+            $('.input-file_wrap .done').removeClass('show');
+        }
+    }
+}
+
+$.mask.definitions['~']='[+-]';
+$("#evorker-form__time").mask("99:99", {placeholder: "00:00" });
