@@ -181,11 +181,10 @@ $(document).ready(function() {
     let img = $('.js-index-slider_img');
 
     img.each(function () {
-        let article = $(this).parent().parent().parent();
+        let article = $(this).parent().parent();
         let imgBg = $(this).attr('src');
-        let imgSrc = 'url("' + imgBg + '") center center no-repeat';
-        article.css('background',imgSrc);
-        article.css('background-size','cover');
+        let imgSrc = 'url("' + imgBg + '")';
+        article.css('background-image',imgSrc);
     });
 });
 
@@ -292,17 +291,27 @@ $(document).ready(function() {
 
 function check(){
     let x = document.getElementById("evorker-form__file");
+    var txt = "";
     if ('files' in x) {
         if (x.files.length !== 0) {
             $('.input-file_wrap .plus').addClass('none');
             $('.input-file_wrap .text').addClass('none');
-            $('.input-file_wrap .done').addClass('show');
+            $('.input-file_wrap #info').addClass('show');
+
+            for (var i = 0; i < x.files.length; i++) {
+                txt += "" + (i+1) + ". файл<br>";
+                var file = x.files[i];
+                if ('name' in file) {
+                    txt += "Имя: " + file.name + "<br><br>";
+                }
+            }
         } else {
             $('.input-file_wrap .plus').removeClass('none');
             $('.input-file_wrap .text').removeClass('none');
-            $('.input-file_wrap .done').removeClass('show');
+            $('.input-file_wrap #info').removeClass('show');
         }
     }
+    document.getElementById("info").innerHTML = txt;
 }
 
 $.mask.definitions['~']='[+-]';
