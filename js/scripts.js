@@ -1,26 +1,28 @@
+"use strict";
+
 $('.select-form select').each(function() {
-    var $this = $(this)
-        , numberOfOptions = $(this).children('option').length;
+    let $this = $(this);
+    let numberOfOptions = $(this).children('option').length;
     $this.addClass('select_hidden');
     $this.wrap('<div class="select"></div>');
     $this.after('<p class="select_styled"></p>');
 
-    var $styledSelect = $this.next('p.select_styled');
+    let $styledSelect = $this.next('p.select_styled');
 
     $styledSelect.text($this.children('option').eq(0).text());
 
-    var $list = $('<ul />', {
+    let $list = $('<ul />', {
         'class': 'select_options'
     }).insertAfter($styledSelect);
 
-    for (var i = 0; i < numberOfOptions; i++) {
+    for (let i = 0; i < numberOfOptions; i++) {
         $('<li />', {
             text: $this.children('option').eq(i).text(),
             rel: $this.children('option').eq(i).val()
         }).appendTo($list);
     }
 
-    var $listItems = $list.children('li');
+    let $listItems = $list.children('li');
 
     $styledSelect.click(function(e) {
         e.stopPropagation();
@@ -44,28 +46,28 @@ $('.select-form select').each(function() {
 });
 
 $('.master_form select').each(function() {
-    var $this = $(this)
-        , numberOfOptions = $(this).children('option').length;
+    let $this = $(this);
+    let numberOfOptions = $(this).children('option').length;
     $this.addClass('select_hidden');
     $this.wrap('<div class="select"></div>');
     $this.after('<p class="select_styled"></p>');
 
-    var $styledSelect = $this.next('p.select_styled');
+    let $styledSelect = $this.next('p.select_styled');
 
     $styledSelect.text($this.children('option').eq(0).text());
 
-    var $list = $('<ul />', {
+    let $list = $('<ul />', {
         'class': 'select_options'
     }).insertAfter($styledSelect);
 
-    for (var i = 0; i < numberOfOptions; i++) {
+    for (let i = 0; i < numberOfOptions; i++) {
         $('<li />', {
             text: $this.children('option').eq(i).text(),
             rel: $this.children('option').eq(i).val()
         }).appendTo($list);
     }
 
-    var $listItems = $list.children('li');
+    let $listItems = $list.children('li');
 
     $styledSelect.click(function(e) {
         e.stopPropagation();
@@ -103,16 +105,22 @@ $('.categories-nav_item').on('click', function (e) {
     $(this).toggleClass('categories-nav_item_active');
 });
 
-var index__slider = new Swiper('.index__slider-wrap', {
+let index__slider = new Swiper('.index__slider-wrap', {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
     setWrapperSize: false,
+    autoHeight: false,
     pagination: {
         el: '.pagination',
         clickable: true,
         bulletClass: 'dot',
         bulletActiveClass: 'active'
+    },
+    breakpoints: {
+        768: {
+            autoHeight: true
+        }
     }
 });
 
@@ -291,16 +299,16 @@ $(document).ready(function() {
 
 function check(){
     let x = document.getElementById("evorker-form__file");
-    var txt = "";
+    let txt = "";
     if ('files' in x) {
         if (x.files.length !== 0) {
             $('.input-file_wrap .plus').addClass('none');
             $('.input-file_wrap .text').addClass('none');
             $('.input-file_wrap #info').addClass('show');
 
-            for (var i = 0; i < x.files.length; i++) {
+            for (let i = 0; i < x.files.length; i++) {
                 txt += "" + (i+1) + ". файл<br>";
-                var file = x.files[i];
+                let file = x.files[i];
                 if ('name' in file) {
                     txt += "Имя: " + file.name + "<br><br>";
                 }
