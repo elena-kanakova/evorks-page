@@ -169,7 +169,12 @@ $(document).ready(function() {
     });
 
     input.blur(function(){
-        label.removeClass('hidden');
+        if(document.getElementById("categories_filter-form_input").value === '') {
+            label.removeClass('hidden');
+        }
+        else {
+            label.addClass('hidden');
+        }
     });
 });
 
